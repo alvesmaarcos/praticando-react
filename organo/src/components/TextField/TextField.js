@@ -1,8 +1,10 @@
-export const TextField = () => {
+export const TextField = (props) => {
     return (
         <div className="text-field">
-            <label>Nome</label>
-            <input placeholder="Digite o seu nome"></input>
+            <label>
+                {props.label}
+            </label>
+            <input placeholder={props.placeholder}></input>
         </div>
     )
 }
