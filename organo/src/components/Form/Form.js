@@ -3,7 +3,7 @@ import Button from "../Button"
 import SuspendendList from "../SuspendedList"
 import TextField from "../TextField"
 
-export const Form = () => {
+export const Form = (props) => {
     const times = [
         'Programação',
         'Front-End',
@@ -21,7 +21,12 @@ export const Form = () => {
 
     const aoEnviar = (evento) => {
         evento.preventDefault()
-        console.log('Form has been submitted.', nome, cargo, imagem, time)
+        props.aoCadastrarColaborador({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
     return (
