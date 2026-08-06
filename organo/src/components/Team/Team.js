@@ -1,8 +1,8 @@
 import Collaborator from "../Collaborator"
 
 export const Team = (props) => {
-        console.log(props.colaboradores.lenght)
     return (
+        props.colaboradores.length > 0 ?
         <section className="team" style={{ backgroundColor: props.corSecundaria }}>
             <h3 style={{ borderColor: props.corPrimaria}}>{props.nome}</h3>
             <div className="colaboradores">
@@ -13,6 +13,6 @@ export const Team = (props) => {
                                                         cargo={colaborador.cargo}                                                        
                                                         />) }
             </div>
-        </section>
+        </section> : ''
     )
 }
