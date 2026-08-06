@@ -4,16 +4,7 @@ import SuspendendList from "../SuspendedList"
 import TextField from "../TextField"
 
 export const Form = (props) => {
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'DevOps',
-        'UX e Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
+    
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
@@ -56,7 +47,7 @@ export const Form = (props) => {
                 <SuspendendList 
                     required={true}
                     label='Time' 
-                    itens={times}
+                    itens={props.times}
                     val={time}
                     aoAlterado={val => setTime(val)}
                 />
