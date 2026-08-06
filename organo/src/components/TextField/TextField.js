@@ -9,7 +9,7 @@ export const TextField = (props) => {
             <label>
                 {props.label}
             </label>
-            <input onChange={aoAlterar} required={props.obrigatorio} placeholder={props.placeholder}></input>
+            <input onChange={aoAlterar} required={props.obrigatorio} placeholder={props.placeholder} value={props.val}></input>
         </div>
     )
 }
